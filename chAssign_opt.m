@@ -30,11 +30,11 @@ for ap1 = 1:length(APs)
     end
 end
 tempCH=[1,6,11];
-for ap1=1:3
+for ap1=1:min(length(APs), 3)
     assignedCh(ap1)=tempCH(ap1);
     set_CH(APs(ap1),parameters,assignedCh(ap1));
 end
-list=1:3;
+list=1:min(length(APs), 3);
 for ap1=list
     for f1 = 1:parameters.nCH
         list2=list;
